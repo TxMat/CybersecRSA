@@ -43,7 +43,7 @@ public class Main {
         System.out.println("Decrypted message: " + decryptMessage);
 
         try {
-            byte[] hash = HashGenerator.generateHash("/home/uranus/IdeaProjects/CybersecRSA/src/test.txt");
+            byte[] hash = HashGenerator.generateHash("src/test.txt");
             System.out.println(Arrays.toString(hash));
         } catch (IOException ea) {
             ea.printStackTrace();

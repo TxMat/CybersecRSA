@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="20908692-1f01-470f-88c7-bb87ab317ac8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HashGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HashGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +71,7 @@
       <workItem from="1676511990806" duration="581000" />
       <workItem from="1676512581792" duration="491000" />
       <workItem from="1676513080624" duration="4357000" />
-      <workItem from="1676755237731" duration="2485000" />
+      <workItem from="1676755237731" duration="3591000" />
     </task>
     <task id="LOCAL-00001" summary="almost working">
       <created>1676576340636</created>
@@ -82,7 +80,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676576340636</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="ca marche let's go">
+      <created>1676766729977</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1676766729977</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -91,7 +96,8 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <MESSAGE value="almost working" />
-    <option name="LAST_COMMIT_MESSAGE" value="almost working" />
+    <MESSAGE value="ca marche let's go" />
+    <option name="LAST_COMMIT_MESSAGE" value="ca marche let's go" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -101,7 +107,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/HashGenerator.java</url>
-          <line>26</line>
+          <line>25</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
