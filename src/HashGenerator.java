@@ -1,7 +1,6 @@
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.security.NoSuchAlgorithmException;
 
 public class HashGenerator {
 
@@ -9,7 +8,7 @@ public class HashGenerator {
     private static final int MATRIX_COLS = 100;
     private static final int BLOCK_SIZE = MATRIX_ROWS * MATRIX_COLS;
 
-    public static byte[] generateHash(String filename) throws IOException, NoSuchAlgorithmException {
+    public static byte[] generateHash(String filename) throws IOException {
         byte[] hash = new byte[MATRIX_ROWS];
         byte[] block = new byte[BLOCK_SIZE];
         int bytesRead;
@@ -26,11 +25,11 @@ public class HashGenerator {
                 // Generate matrix and calculate XOR of each column
                 byte[][] matrix = generateMatrix(block);
                 for (int col = 0; col < MATRIX_COLS; col++) {
-                    byte xor = matrix[0][col];
-                    for (int row = 1; row < MATRIX_ROWS; row++) {
+                    byte xor = 0;
+                    for (int row = 0; row < MATRIX_ROWS; row++) {
                         xor ^= matrix[row][col];
                     }
-                    hash[col] ^= xor;
+                    hash[col % MATRIX_ROWS] ^= xor;
                 }
             }
         }

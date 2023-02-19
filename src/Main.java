@@ -1,7 +1,5 @@
 import java.io.IOException;
 import java.math.BigInteger;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.util.Arrays;
 
@@ -46,12 +44,8 @@ public class Main {
 
         try {
             byte[] hash = HashGenerator.generateHash("/home/uranus/IdeaProjects/CybersecRSA/src/test.txt");
-            MessageDigest digest = MessageDigest.getInstance("SHA-256");
-            byte[] hash256 = digest.digest(hash);
             System.out.println(Arrays.toString(hash));
-            System.out.println("aaaaaaaaaaaaaaa");
-            System.out.println(Arrays.toString(hash256));
-        } catch (IOException | NoSuchAlgorithmException ea) {
+        } catch (IOException ea) {
             ea.printStackTrace();
         }
 
