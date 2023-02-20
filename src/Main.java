@@ -5,14 +5,14 @@ import java.util.Arrays;
 
 public class Main {
 
-    // create method encrypt message that encrypts the message using the public key
+    // encrypts the message using the public key
     public static String encrypt(String message, BigInteger e, BigInteger n) {
         BigInteger m = new BigInteger(message.getBytes());
         BigInteger c = m.modPow(e, n);
         return c.toString();
     }
 
-    // create method decrypt message that decrypts the message using the private key
+    // decrypts the message using the private key
     public static String decrypt(String message, BigInteger d, BigInteger n) {
         BigInteger c = new BigInteger(message);
         BigInteger m = c.modPow(d, n);
@@ -43,7 +43,7 @@ public class Main {
         System.out.println("Decrypted message: " + decryptMessage);
 
         try {
-            byte[] hash = HashGenerator.generateHash("src/test.txt");
+            byte[] hash = HashGenerator.generateHash("src/file_examples/bee_movie_script.txt");
             System.out.println(Arrays.toString(hash));
         } catch (IOException ea) {
             ea.printStackTrace();
