@@ -12,10 +12,11 @@ public static String encrypt(String message,BigInteger e,BigInteger n){
         }
 ```
 
-la fonction prends en entrée une string a encrypter, e l'exposant de chiffrement et n le module de chiffrement
+La fonction prends en entrée une string a encrypter `message`, `e` l'exposant de chiffrement et `n` le module de
+chiffrement la paire des 2 formant la clée publique.
 
-apres avoir transformé le message en un nombre, il est encrypté en le multipliant a la puissance du modulo entre e et n
-dans une variable c qui est ensuite retounée
+Apres avoir transformé le message en un nombre, il est encrypté en le multipliant a la puissance du modulo entre e et n
+dans une variable c qui est ensuite retounée.
 
 ### 2.
 
@@ -27,11 +28,12 @@ public static String decrypt(String message,BigInteger d,BigInteger n){
         }
 ``` 
 
-la fonction prends en entrée une string a decrypter, d l'exposant de dechiffrement et n le module de chiffrement
+La fonction prends en entrée une string a decrypter `message`, `d` l'exposant de dechiffrement et `n` le module de
+chiffrement.
 
-de la meme maniere que la fonction precedente,
+De la meme maniere que la fonction precedente,
 apres avoir transformé le message en un nombre, il est decrypté en le multipliant a la puissance du modulo entre d et n
-dans une variable m qui est ensuite retounée en string
+dans une variable m qui est ensuite retounée en string.
 
 ### Code Complet `Main.java`
 
@@ -158,38 +160,38 @@ public class HashGenerator {
 }
 ```
 
-la classe commence par calculer la taille d'un block, ici 1600 bits
+La classe commence par calculer la taille d'un block, ici 1600 bits.
 
-ensuite elle lit le fichier block par block et le stocke dans un tableau de byte
-si le block n'est pas complet, il est rempli de 0 avec la boucle for
+Ensuite elle lit le fichier block par block et le stocke dans un tableau de byte.
+Si le block n'est pas complet, il est rempli de 0 avec la boucle for.
 
-ensuite on genere une matrice a partir du tableau de block grace a la fonction `generateMatrix`
-qui fonctionne en parcourant la matrice par colonne et en remplissant chaque case avec un byte du tableau de block
+Ensuite on genere une matrice a partir du tableau de block grace a la fonction `generateMatrix`
+qui fonctionne en parcourant la matrice par colonne et en remplissant chaque case avec un byte du tableau de block.
 
-ensuite on calcule le hash en parcourant la matrice par colonne et en calculant le xor de chaque colonne
+Ensuite on calcule le hash en parcourant la matrice par colonne et en calculant le xor de chaque colonne.
 
-pour finir on retourne le hash generé
+Pour finir on retourne le hash generé.
 
 ### Terminal output
 
-avec le fichier `test.txt` contenant `lorem ipsum dolor sit amet`
+Avec le fichier `test.txt` contenant `lorem ipsum dolor sit amet`
 
 ```
 [3, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 ```
 
-le hash est donc `03010000000000000000000000000000`
+Le hash est donc `03010000000000000000000000000000`
 
-avec le fichier `bee_movie_script.txt` contenant le script du film `bee movie`
+Avec le fichier `bee_movie_script.txt` contenant le script du film `bee movie`
 
 ```
 [105, 115, 47, 54, 84, 68, 38, 105, 47, 12, 6, 79, 55, 28, 73, 1]
 ```
 
-le hash est donc `69732f36544426692f0c064f371c4901`
+Le hash est donc `69732f36544426692f0c064f371c4901`
 
 _Note : Ces hash ont ete generes sur un systeme linux et sont donc different sur windows et mac os a cause de leur
-differente gestion des sauts de ligne_
+differente gestion des sauts de ligne._
 
 ---
 [Github Repo](https://github.com/TxMat/CybersecRSA)
